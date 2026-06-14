@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body{
+                background-image: url("img/3.webp");
+                background-repeat: repeat;
+                background-size: cover;
+                margin:70px 250px;
+                
+            }
+            .mytable{
+               /* height: 500px;
+                width: 800px; 
+                background-color: red; */
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+                color: white;
+                margin: auto;
+                transform: scale(1.3);
+                transform-origin:top center;
+              
+            }
+            
+            .mytable thead{
+                display: block;
+            }
+            .mytable tbody{
+                display: block;
+            } 
+            .mytable tfoot{
+                display: block;
+            }
+             /*td,th{
+                 padding:0;
+                }
+
+            .mytable{
+                  border-collapse:collapse;
+                } */
+            .common{
+                color: white;
+                
+            }
+            .PricingTable{
+                width:169px;
+                height: 79px;
+                background-color: #202b41;
+                text-align: center;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                box-sizing: border-box;
+                font-size: 1.3em;
+                border-top-left-radius: 10px;
+        
+
+               
+            }
+            .common{
+                width:134px;
+                height:79px;
+                background-color:#293450;
+                position: relative;
+                overflow: hidden;
+               
+            }
+            thead th:last-child .common{
+                 border-top-right-radius:10px;
+            }
+            .a1{
+                width:169px;
+                height:47px;
+                margin: 0px auto;
+                background-color:#36466a;
+                font-size: 0.5em;
+                overflow:visible;
+            }
+            .common2{
+                width:134px;
+                height:47px;
+                line-height: 47px;
+                background-color:#36466a;
+              }
+            .b1{
+                width:169px;
+                height:47px;
+                background-color: #202b41;
+                font-size: 0.5em;
+                overflow:visible;
+                margin: 0px auto;
+            }
+            .common3{
+                width:134px;
+                height:47px;
+                line-height: 47px; 
+                background-color: #202b41;
+                background-image: url(img/check-button.png);
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 20px 20px;
+            }
+            .c1{
+                width:169px;
+                height:47px;
+                background-color:#36466a;
+                font-size: 0.5em;
+                overflow:visible;
+                margin: 0px auto;
+            }
+            .common4{
+                width:134px;
+                height:47px;
+                line-height: 47px;
+                background-color:#36466a;
+                background-image: url(img/check-button.png);
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 20px 20px;
+              }
+              .d1{
+                width:169px;
+                height:47px;
+                background-color: #202b41;
+                font-size: 0.5em;
+                overflow:visible;
+                margin: 0px auto;
+            }
+            .d2{
+                background-image: url(img/cross.png) !important;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 20px 20px;
+            }
+            .common5{
+                width:134px;
+                height:47px;
+                line-height: 47px; 
+                background-color: #202b41;
+                background-image: url(img/check-button.png);
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 20px 20px;
+            }
+             .e1{
+                width:169px;
+                height:47px;
+                background-color:#36466a;
+                font-size: 0.5em;
+                overflow:visible;
+                margin: 0px auto;
+            }
+            .e2{
+                background-image: url(img/cross.png) !important;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 20px 20px;
+            }
+            .e3{
+                background-image: url(img/cross.png) !important;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 20px 20px;
+            }
+
+            .common6{
+                width:134px;
+                height:47px;
+                line-height: 47px;
+                background-color:#36466a;
+                background-image: url(img/check-button.png);
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 20px 20px;
+              }
+              .e1{
+                border-bottom-left-radius: 10px;
+              }
+              
+              .x1{
+                width: 169px ;
+                height: 48px;
+              }
+              .common9{
+                width:134px;
+                height:48px;
+                line-height: 48px;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            
+              }
+              .x2{
+                background: linear-gradient(to right,#cccb18,#4bd154);
+               
+              }
+              .x3{
+                background: linear-gradient(to right,#3c8bce,#28c397);
+              }
+              .x4{
+                background: linear-gradient(to right,#9f3bcf,#744de8);
+              }
+              .x5{
+                background: linear-gradient(to right,#f68f2a,#e64f7a);
+              }
+              
+              .basic{
+                
+                font-size: 7px;
+                font-weight: lighter;
+                transform: translateY(18px);
+              }
+              .free{
+                
+                font-size: 25px;
+                font-weight: bolder;
+                transform: translateY(15px);
+              }
+              .pricing{
+                font-size:0.9em;
+                font-weight:bolder;
+                transform: translateY(13px);
+              }
+              .table{
+                font-size: 15px;
+                font-weight: lighter;
+                transform: translateY(13px);
+              }
+              .standard{
+                font-size: 7px;
+                font-weight: lighter;
+                transform: translateY(18px);
+              }
+              .dollor5{
+                font-size: 25px;
+                font-weight: bolder;
+                transform: translateY(15px);
+              }
+              .ppm{
+                font-size: 5px;
+                font-weight: lighter;
+                transform: translateY(16px);
+              }
+              .rec{
+                position: absolute;
+                transform: rotate(-45deg);
+                width:90px;
+                height:18px;
+                line-height: 18px;
+                background: linear-gradient(to right,#604dff,#a117c2);
+                font-size: 6px;
+                font-weight: lighter;
+                color: white;
+                top: 8px;
+                left: -28px;
+              }
+              .rec2{
+                background: linear-gradient(to right,#e3a344,#e12a71);
+              }
+              .watermark{
+                color: white;
+                font-size: x-small;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight:lighter;
+                text-align: center;
+                position: fixed;
+                bottom: 10px;
+                left: 0;
+                width: 100%;
+              }
+        </style>
+    </head>
+<body>
+    <div class="watermark">
+        @2026 Created By Nikhil || Project - Pricing Table || Web Dev. ||
+
+    </div>
+    <table class="mytable" border="0" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <th>
+                    <div class="PricingTable " >
+                        <div class="pricing">
+                            Pricing
+                        </div>
+                        <div class="table">
+                            Table
+                        </div>
+                       
+                    </div>
+
+                </th>
+                <th>
+                     <div class="common">
+
+                        <div class="basic" >
+                            Basic
+                        </div>
+                        <div class="free" >
+                            Free
+                        </div>
+                    </div>
+
+                </th>
+                <th>
+                    <div class="common" >
+                        <div class="standard">
+                            Standard
+                        </div>
+                        <div class="dollor5">
+                            <sup>$</sup>5
+                        </div>
+                        <div class="ppm">
+                            Price per Month
+                        </div>
+                    
+                    </div>
+
+                </th>
+                <th>
+                    <div class="common" >
+                          <div class="standard">
+                            Premium
+                        </div>
+                        <div class="dollor5">
+                            <sup>$</sup>19
+                        </div>
+                        <div class="ppm">
+                            Price per Month
+                        </div>
+                        <div class="rec">
+                            Recommend
+                        </div>
+                    </div>
+
+                </th>
+                <th>
+                    <div class="common" >
+                           <div class="standard">
+                            Special
+                        </div>
+                        <div class="dollor5">
+                            <sup>$</sup>49 
+                        </div>
+                        <div class="ppm">
+                            Price per Month
+                        </div>
+                        <div class="rec rec2">
+                            Recommend
+                        </div>
+                    </div>
+
+                </th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>
+                    <div class="a1">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit,sed diam nonummy nibh euismod tincidunt ut laoreetdolore magna aliquam erat volutpat. Ut wisi enim ad
+                    </div>
+
+                </td>
+                <td>
+                    <div class="common2 a2">
+                        10 GB
+
+                    </div>
+
+                </td>
+                <td>
+                    <div class="common2 a3">
+                        100 GB
+
+                    </div>
+
+                </td>
+                <td>
+                    <div class="common2 a4">
+                        500 GB
+                    </div>
+
+                </td>
+                <td>
+                    <div class="common2 a5">
+                        1000 GB
+
+                    </div>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="b1">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit,sed diam nonummy nibh euismod tincidunt ut laoreetdolore magna aliquam erat volutpat. Ut wisi enim ad
+                    </div>
+
+                </td>
+                <td>
+                    <div class="common3 b2">
+                       
+                    </div>
+
+                </td>
+                <td>
+                    <div class="common3 b3">
+                
+
+                    </div>
+
+                </td>
+                <td>
+                    <div class="common3 b4">
+                       
+                    </div>
+
+                </td>
+                <td>
+                    <div class="common3 b5">
+                      
+
+                    </div>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="c1">
+                     Lorem ipsum dolor sit amet, consectetuerpiscing elit,sed diam nonummy nibh euismod tincidunt ut laoreetdolore magna aliquam erat volutpat. Ut wisi enim ad
+                    </div>
+
+                </td>
+                <td>
+                    <div class="common4 c2">
+                        
+
+                    </div>
+
+                </td>
+                <td>
+                    <div class="common4 c3">
+                        
+
+                    </div>
+
+                </td>
+                <td>
+                    <div class="common4 c4">
+                        
+                    </div>
+
+                </td>
+                <td>
+                    <div class="common4 c5">
+                        
+
+                    </div>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="d1">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscingelit, sed diam nonummy nibh euismod tincidunt ut
+                    </div>
+
+                </td>
+                <td>
+                    <div class="common5 d2">
+                    
+
+                    </div>
+
+                </td>
+                <td>
+                    <div class="common5 d3">
+                    
+
+                    </div>
+
+                </td>
+                <td>
+                    <div class="common5 d4">
+                        
+                    </div>
+
+                </td>
+                <td>
+                    <div class="common5 d5">
+                        
+
+                    </div>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="e1">
+                     Lorem ipsum dolor sit amet, consectetuer adipiscingelit, sed diam nonummy nibh euismod tincidunt utlaoreet dolore magna aliquam erat volutpat. Ut wisi
+                    </div>
+
+                </td>
+                <td>
+                    <div class="common6 e2">
+                        
+
+                    </div>
+
+                </td>
+                <td>
+                    <div class="common6 e3">
+                        
+                    </div>
+
+                </td>
+                <td>
+                    <div class="common6 e4">
+                        
+                    </div>
+
+                </td>
+                <td>
+                    <div class="common6 e5">
+                        
+                    </div>
+
+                </td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>
+                     <div class="x1">
+                    
+                     </div>
+                </td>
+                <td>
+                     <div class="common9 x2">
+                        <b>Buy Now</b>
+                     </div>
+                </td>
+                <td>
+                     <div class="common9 x3">
+                        <b>Buy Now</b>
+                     </div>
+                </td>
+                <td>
+                     <div class="common9 x4">
+                        <b>Buy Now</b>
+                     </div>
+                </td>
+                <td>
+                     <div class="common9 x5">
+                        <b>Buy Now</b>
+                     </div>
+                </td>
+            </tr>
+
+        </tfoot>
+
+    </table>
+</body>
+</html>
